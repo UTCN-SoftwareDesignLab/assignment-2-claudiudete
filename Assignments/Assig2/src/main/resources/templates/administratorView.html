@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin View</title>
+</head>
+<body>
+<h1>Administrator view</h1>
+<h2>Select an operation</h2>
+
+<form action="#" th:action="@{createUser}" method="post">
+    <p><input type='submit' class="button" value="createUser" />
+
+    </p>
+</form>
+
+
+<form action="#" th:action="@{updateUser}" method="post">
+    <p><input type='submit' class="button" value="updateUser" />
+
+    </p>
+</form>
+
+
+<form action="#" th:action="@{deleteUser}" method="post">
+    <p><input type='submit' class="button" value="deleteUser" />
+
+    </p>
+</form>
+
+
+<form action="#" th:action="@{findUsers}" method="post">
+    <p><input type='submit' class="button" value="displayUsers" />
+    </p>
+</form>
+
+<form action="#" th:action="@{createBook}" method="post">
+    <p><input type='submit' class="button" value="create book" />
+
+    </p>
+</form>
+
+<form action="#" th:action="@{updateBook}" method="post">
+    <p><input type='submit' class="button" value="update book" />
+
+    </p>
+</form>
+
+
+<form action="#" th:action="@{deleteBook}" method="post">
+    <p><input type='submit' class="button" value="remove book" />
+
+    </p>
+</form>
+
+<form action="#" th:action="@{displayBook}" method="post">
+    <p><input type='submit' class="button" value="display books" />
+
+    </p>
+</form>
+
+<form action="#" th:action="@{generateCSV}" method="post">
+    <p><input type='submit' class="button" value="generate PDF report" />
+
+    </p>
+</form>
+
+<form action="#" th:action="@{generatePDF}" method="post">
+    <p><input type='submit' class="button" value="generate CSV report" />
+
+    </p>
+</form>
+
+
+</body>
+</html>

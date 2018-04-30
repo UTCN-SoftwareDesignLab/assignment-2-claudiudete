@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Select which book you want to sell</h2>
+
+<form action="#" th:action="@{sellBooksByIsbn}" th:object="${book}" method="post">
+    <p>  <input type="submit" class="button" value="sellBook" />  </p>
+    <p>Enter the quantity:     <input type="text" th:field="*{quantity}"> </p>
+     <p>Enter the name:   <input type="text" th:field="*{name}"> </p>
+
+</form>
+
+<table>
+    <tbody>
+    <th>
+    <td >ID</td>
+    <td>Title</td>
+    <td>Author</td>
+    <td>Genre</td>
+    <td>Isbn</td>
+    <td>Price</td>
+    <td>Quantity</td>
+    </th>
+    <tr th:each="book : ${ bookLst }">
+        <td th:text="${ book.id }">ID</td>
+        <td th:text="${ book.name }">Title</td>
+        <td th:text="${ book.author }">Author</td>
+        <td th:text="${ book.genre }">Genre</td>
+        <td th:text="${ book.isbn }">Isbn</td>
+        <td th:text="${ book.price }">Isbn</td>
+        <td th:text="${ book.quantity }">Isbn</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

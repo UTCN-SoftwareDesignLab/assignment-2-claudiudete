@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Display books</title>
+</head>
+<body>
+<h2> Enter the author you want to search by</h2>
+<form action="#" th:action="@{findBooksByAuthor}" th:object="${book}" method="post">
+<p>
+    <input type="submit" class="button" value="find" />
+    <input type="text" th:field="*{author}">
+</p>
+</form>
+</body>
+</html>

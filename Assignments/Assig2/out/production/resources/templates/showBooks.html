@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>DisplayBooks</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+    <style>
+            th {
+            text-align: left;
+            }
+
+
+            </style>
+</head>
+<body>
+-->
+
+<table>
+    <tbody>
+    <tr>
+    <td >ID</td>
+    <td>Title</td>
+    <td>Author</td>
+    <td>Genre</td>
+    <td>Isbn</td>
+    <td>Price</td>
+    <td>Quantity</td>
+    </tr>
+    <tr th:each="book : ${ bookList }">
+        <td th:text="${ book.id }">ID</td>
+        <td th:text="${ book.name }">Title</td>
+        <td th:text="${ book.author }">Author</td>
+        <td th:text="${ book.genre }">Genre</td>
+        <td th:text="${ book.isbn }">Isbn</td>
+        <td th:text="${ book.price }">Price</td>
+        <td th:text="${ book.quantity }">Quantity</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<form action="#" th:action="@{returnBack}"  method="post">
+    <p>
+        <input type="submit" class="button" value="back" />
+
+    </p>
+</form>
+
+
+</body>
+</html>

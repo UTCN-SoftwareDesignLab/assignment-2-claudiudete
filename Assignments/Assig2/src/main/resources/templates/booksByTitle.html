@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Display books</title>
+</head>
+<body>
+<h2>Select the title of the book</h2>
+
+<form action="#" th:action="@{findBooksByTitle}" th:object="${book}" method="post">
+<p>
+    <input type="submit" class="button" value="find" />
+    <input type="text" th:field="*{name}">
+</p>
+</form>
+
+</body>
+</html>

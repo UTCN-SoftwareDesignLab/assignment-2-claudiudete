@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+
+   <style>
+    th {
+    text-align: left;
+    }
+
+
+    </style>
+</head>
+<body>
+<h2>Delete book</h2>
+
+<form action="#" th:action="@{delBook}" th:object="${bookDto}" method="post">
+    <p><input type="submit" class="button" value="delete book" /></p>
+    <p> <input type="text" th:field="*{name}"></p>
+
+</form>
+
+<table style="width:100%">
+    <tbody>
+    <tr>
+        <td >name</td>
+        <td>genre</td>
+        <td>price</td>
+
+    </tr>
+    <tr th:each="book : ${ bookLst }">
+        <td th:text="${ book.name }">ID</td>
+        <td th:text="${ book.genre }">Username</td>
+        <td th:text="${ book.price }">Role</td>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
